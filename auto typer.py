@@ -9,9 +9,9 @@ comments=['KemPalty','yaha waha saare','jaahan me tera naam hai','Sir pe o jiske
 #i=int(0)
 
 time.sleep(5)
-
-for i in range(0,9):
-	pyautogui.typewrite(f"\n\n\ngrid[1][{i}]=DoubleVar()\ncell_1{i}= Entry(window,textvariable=grid[1][{i}],width=2)\ncell_1{i}.grid(column={i+2},row=2,pady=20,padx=20)\ncell_0{i}.delete(0,'end')\n\n\n")
+for j in range(2,9):
+	for i in range(0,9):
+		pyautogui.typewrite(f"\n\n\ngrid[{j}][{i}]=DoubleVar()\ncell_{j}{i}= Entry(window,textvariable=grid[{j}][{i}],width=2)\ncell_{j}{i}.grid(column={i+2},row={j+1},pady=20,padx=20)\ncell_{j}{i}.delete(0,'end')\n\n\n")
 
 
 # for i in range(1,125):
